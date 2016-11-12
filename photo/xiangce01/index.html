@@ -1,9 +1,9 @@
-HTML5+css3ÖÆ×÷µÄ³¬¿á3DÕÕÆ¬Ç½jQueryÌØĞ§´úÂë ÎÒ°®Ä£°åÍÆ¼ö
-
-HTML5+css3+jqueryÖÆ×÷µÄÁ¢Ìå3DÕÕÆ¬Ç½£¬Ê¹ÓÃÊó±êÍÏ×§£¬ÄÜ¿´µ½3DĞı×ªĞ§¹û£¬µã»÷ÏàÆ¬£¬ÏàÆ¬ÄÜ·Å´ó£¬ÒÆ½ü¡£µã»÷ÓÒÉÏ½ÇµÄ¡°HTML5 3DÏà²á¡±£¬»áµ¯³öÊ×Ò³°´Å¥£¬¼ıÍ·»áĞı×ª¡£±¾Ïà²áÊ¹ÓÃÁËHTML5µÄ»­²¼¼¼Êõ£¬½öÖ§³Ö¹È¸è»ò»ğºüµÈä¯ÀÀÆ÷¡£
-
-Ê¹ÓÃ·½·¨£º
-1¡¢ÔÚheadÇøÓòÒıÈëÏÂÃæµÄ´úÂë£º
+ï»¿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>äºšå©·ä¸“å±ç›¸å†Œ</title>
+<!--å¼•å…¥å¼€å§‹-->
 <link rel="stylesheet" href="slider-wb.css">
 <style>
 html {
@@ -364,12 +364,30 @@ body {
 	options:{
 		imagesPath: ""
 	}
+
 });
+
 </script>
 <script src="imageTransform3D.js"></script>
-
-2¡¢°ÑÒÔÏÂ´úÂë¿½±´µ½ÄúµÄhtmlÒ³Ãæ:
-<canvas style="cursor: move;" height="933" width="1920" id="canvas">ÄãµÄä¯ÀÀÆ÷²»Ö§³ÖHTML5»­²¼¼¼Êõ£¬ÇëÊ¹ÓÃ¹È¸èä¯ÀÀÆ÷¡£</canvas>
+<!--å¼•å…¥ç»“æŸ-->
+<style>
+body{margin:0; padding:0;}
+ul#wimoban_nav{padding-left:50px; margin-bottom:10px; border-bottom:2px solid #ccc; overflow:hidden; _zoom:1;}
+ul#wimoban_nav li{float:left; display:inline; margin:10px;}
+ul#wimoban_nav li a{display:block; font-size:16px;}
+ul#wimoban_nav li a,#wimoban_p,#wimoban_p a{color:#fff; font-family:"å¾®è½¯é›…é»‘";}
+ul#wimoban_nav li a:hover,#wimoban_p a:hover{color:red;}
+#wimoban_p{text-align:center; font-size:14px; clear:both;}
+</style>
+</head>	
+<body oncontextmenu='return false' ondragstart='return false'>
+<ul id="wimoban_nav">
+    <li><a title="é¦–é¡µ" href="../love/index.html">é¦–é¡µ</a></li>
+    <li><a title="ç›¸å†Œ1" href="#">ç‚¹æˆ‘å•Š</a></li>
+    <li><a title="ç›¸å†Œ2" href="../xiangce02/index.html">æˆ³æˆ‘å“¦</a></li>
+</ul>
+<!-- ä»£ç å¼€å§‹ -->
+<canvas style="cursor: move;" height="933" width="1920" id="canvas">ä½ çš„æµè§ˆå™¨ä¸æ”¯æŒHTML5ç”»å¸ƒæŠ€æœ¯ï¼Œè¯·ä½¿ç”¨è°·æ­Œæµè§ˆå™¨ã€‚</canvas>
 <!-- dhteumeuleu nav menu -->
 <div id="nav">
 	<input name="nav-switch" id="nav-switch" type="checkbox">
@@ -377,12 +395,9 @@ body {
 		<div class="container">
 			<div class="nav-on">
 				<ul class="menu">
-					<li class="home"><a href="http://www.5imoban.net/" alt="ÍøÕ¾Ä£°å" title="ÍøÒ³Ä£°å">Home</a></li>
+					<li class="home"><a href="http://www.5imoban.net/" alt="ç½‘ç«™æ¨¡æ¿" title="ç½‘é¡µæ¨¡æ¿">Home</a></li>
 			</ul></div>
-			<div class="nav-off">
-				<div id="icon"><div></div><div></div></div>
-				<h1 class="title">HTML5 3DÏà²á</h1>
-			</div>
+
 		</div>
 	</label>
 </div> 
@@ -442,10 +457,17 @@ body {
 }
     </style>
     <div class="Qg">
-      <div class="Dg"><span class="tf"><span class="iI"></span><span class="MM jI">html5Ïà²áÌØĞ§</span></span></div>     
+      <div class="Dg"><span class="tf"><span class="iI"></span><span class="MM jI">å¼ äºšå©·</span></span></div>
+
     </div></div>
-<script src="http://www.5imoban.net/download/jquery/jquery-1.8.3.min.js"></script>
+<script src="../jquery-2.1.4/jquery.min.js"></script>
 <script src="util.js"></script>
 <script src="ga.js"></script>
-
-¸ü¶àÌØĞ§»¶Ó­·ÃÎÊ£ºhttp://www.5imoban.net/texiao/
+<audio autoplay>
+	<source src="../love/music.mp3">
+	<source src="../love/music.wav">
+	<source src="../love/music.ogg">
+</audio>
+<!-- ä»£ç ç»“æŸ -->
+</body>
+</html>
