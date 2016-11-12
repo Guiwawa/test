@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>一个像夏天一个像秋天</title>
+<!--引入开始-->
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script src="../jquery-2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+<!--引入结束-->
+<style>
+body{margin:0; padding:0;}
+ul#wimoban_nav{padding-left:50px; margin-bottom:10px; border-bottom:2px solid #ccc; overflow:hidden; _zoom:1;}
+ul#wimoban_nav li{float:left; display:inline; margin:10px;}
+ul#wimoban_nav li a{display:block; font-size:16px;}
+ul#wimoban_nav li a,#wimoban_p,#wimoban_p a{color:#000; font-family:"微软雅黑";}
+ul#wimoban_nav li a:hover,#wimoban_p a:hover{color:red;}
+#wimoban_p{text-align:center; font-size:14px; clear:both;}
+</style>
+</head>	
+<body oncontextmenu='return false' ondragstart='return false'>
+<ul id="wimoban_nav">
+    <li><a title="首页" href="#">首页</a></li>
+    <li><a title="相册1" href="../xiangce01/index.html">点我啊</a></li>
+    <li><a title="相册2" href="../xiangce02/index.html">戳我哦</a></li>
+</ul>
+<!-- 代码开始 -->
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*2012—09-10,</span>相识<br />
+			<span class="space"/><span class="comments">*2016-11-12.</span>至今<br />
+			<span class="space"/><span class="comments">*/</span><br />
+			一个女孩叫： <span class="keyword">秦晓飞</span>F<br />
+			另一个女孩叫： <span class="keyword">张亚婷</span>T<br />
+			<span class="comments">//从陌生到熟悉 </span><br />
+			F感觉很幸运认识了T;<br />
+			<span class="comments">//不联系不代表忘记</span><br />
+			 T的身边似乎有很多朋友，F有时候感到自己似乎不被需要，但F却从未离开过<br />
+			<span class="comments">// AS time goes on.</span><br />
+			 F渐渐习惯了和T一起斗嘴，抬杠的日子<br />
+			<span class="comments">// At the same time.</span><br />
+			 T也开始意识到F的存在.<br />
+			<span class="comments">//人生乐在相知心</span><br />
+			<span class="comments">//T很聪明，很善良，F很喜欢和T分享一些小秘密</span><br />
+			<span class="keyword">T</span>也很高兴 <spFan class="keyword">倾听</spFan>;<br />
+			<span class="keyword">F</span>很想念T<span class="keyword">！</span>;<br />
+			<span class="placeholder"/><span class="comments">//他们相隔很远</span><br />
+			<span class="placeholder"/><span class="comments">//但是网络很发达啊</span><br />
+			<span class="placeholder"/>可是T很倔强，绝不主动找F聊天<br />
+			<span class="comments">//所以F在这里要告诉T，不联系不代表忘记，因为有的人是住在心里的！</span><br />
+			<br>
+			<br>
+			I want to say:<br />
+			婷, 下次换我劈死你可好！<br />
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					亲爱的，遇见你是我最美丽的意外
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					不说爱你，只言不弃<br/>
+					<div class="signature">--秦晓飞</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2012, 09, 10);
+together.setHours(20);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+<!-- 代码结束 -->
+<div id="wimoban_p">
+    <p> 婷：记得每天微笑，向向日葵一样向着太阳</p>
+	<img src="xiaolian.png" alt="">
+</div>
+</body>
+</html>

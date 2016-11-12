@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .view {
+            width: 600px;
+            height: 300px;
+            border: 1px solid #ccc;
+            margin: 100px auto;
+            position: relative;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            height: 100%;
+            width: 100%;
+
+            transform-style: preserve-3d;
+
+        }
+
+        ul li{
+            width: 120px;
+            height: 100%;
+            float: left;
+            position: relative;
+            transform-style: preserve-3d;
+
+        }
+
+        ul li span{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        ul li span:nth-child(1){
+            background-image: url("images/meinv-16.jpg");
+            transform: translateZ(150px);
+        }
+        ul li span:nth-child(2){
+            background-image: url("images/meinv-24.jpg");
+            transform: rotateX(90deg) translateZ(150px);
+        }
+        ul li span:nth-child(3){
+            background-image: url("images/meinv-29.jpg");
+            transform: rotateX(180deg) translateZ(150px);
+        }
+        ul li span:nth-child(4){
+            background-image: url("images/meinv-34.jpg");
+            transform: rotateX(270deg) translateZ(150px);
+        }
+        ul li:nth-child(1) span{background-position: 0px}
+        ul li:nth-child(2) span{background-position: -120px}
+        ul li:nth-child(3) span{background-position: -240px}
+        ul li:nth-child(4) span{background-position: -360px}
+        ul li:nth-child(5) span{background-position: -480px}
+
+        /*按钮*/
+        .prev, .next {
+            display: block;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            margin-top: -30px;
+            font-size: 40px;
+            color: #FFF;
+            text-decoration: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 50%;
+        }
+
+        .next {
+            right: 0;
+        }
+        ul#wimoban_nav{padding-left:50px; margin-bottom:10px; border-bottom:2px solid #ccc; overflow:hidden; _zoom:1;}
+        ul#wimoban_nav li{float:left; display:inline; margin:10px;}
+        ul#wimoban_nav li a{display:block; font-size:16px;}
+        ul#wimoban_nav li a,#wimoban_p,#wimoban_p a{color:#000; font-family:"微软雅黑";}
+        ul#wimoban_nav li a:hover,#wimoban_p a:hover{color:red;}
+        #wimoban_p{text-align:center; font-size:14px; clear:both;}
+    </style>
+</head>
+<body>
+<div>
+    <ul id="wimoban_nav">
+        <li><a title="首页" href="../love/index.html">首页</a></li>
+        <li><a title="相册1" href="../xiangce01/index.html">点我啊</a></li>
+        <li><a title="相册2" href="#">戳我哦</a></li>
+    </ul>
+</div>
+<div class="view">
+    <ul>
+        <li><span></span><span></span><span></span><span></span></li>
+        <li><span></span><span></span><span></span><span></span></li>
+        <li><span></span><span></span><span></span><span></span></li>
+        <li><span></span><span></span><span></span><span></span></li>
+        <li><span></span><span></span><span></span><span></span></li>
+    </ul>
+    <a href="javascript:;" class="prev">&lt;</a>
+    <a href="javascript:;" class="next">&gt;</a>
+</div>
+<script src="../jquery-2.1.4/jquery.min.js"></script>
+<script>
+    $(function () {
+        var index=0;
+        $("body").on("click",".prev",function () {
+           index++;
+            $(".view li").css({"transition":"all 1s","transform":"rotateX("+index*90+"deg)"}).each(function (i,t) {
+                $(this).css("transition-delay",i*0.25+"s");
+            });
+        })
+                .on('click','.next',function(){
+            /*下一张*/
+            index --;
+            $('.view li').css({'transition':'all 1s','transform':'rotateX('+index*90+'deg)'}).each(function(i,t){
+                $(this).css('transition-delay',i*0.25+'s');
+            });
+        });
+    });
+</script>
+</body>
+</html>
